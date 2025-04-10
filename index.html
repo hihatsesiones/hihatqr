@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Confirmado</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+
+    #play-button {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="play-button"></div>
+  
+  <h1>QR CONFIRMADO</h1>
+  <p>Bienvenido a Hi-Hat! Con este QR tienes ingreso sin costo (+5 invitados) hasta las 12:30 a.m. Luego de esa hora el ingreso tendrá un valor de S/.20.</p>
+
+  <audio id="bg-music" loop>
+    <source src="audio.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('play-button');
+
+    btn.addEventListener('click', () => {
+      audio.play();
+      btn.remove(); // Oculta el botón invisible una vez suena
+    });
+  </script>
+</body>
+</html>
