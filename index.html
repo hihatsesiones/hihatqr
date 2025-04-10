@@ -6,52 +6,36 @@
   <title>QR Confirmado</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      background-color: black;
+      color: white;
       font-family: 'Arial', sans-serif;
-      background: #000;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       text-align: center;
-      flex-direction: column;
+      padding: 50px;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.5em;
+      margin-bottom: 20px;
     }
+
     p {
-      font-size: 1.2rem;
-      max-width: 400px;
-      margin: 0 auto 2rem;
+      font-size: 1.2em;
+      max-width: 500px;
+      margin: 0 auto;
     }
+
     audio {
       display: none;
     }
   </style>
 </head>
 <body>
-  <div id="content"></div>
+  <h1>QR CONFIRMADO</h1>
+  <p>Bienvenido a Hi-Hat! Con este QR tienes ingreso sin costo (+5 invitados) hasta las 12:30 a.m. Luego de esa hora el ingreso tendrá un valor de S/.20.</p>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const isQR = params.get('qr') === 'true';
-
-    const content = document.getElementById('content');
-
-    if (isQR) {
-      content.innerHTML = `
-        <h1>QR CONFIRMADO</h1>
-        <p>Bienvenido a Hi-Hat! Con este QR tienes ingreso sin costo (+5 invitados) hasta las 12:30 a.m. Luego de esa hora el ingreso tendrá un valor de S/.20.</p>
-        <audio autoplay loop>
-          <source src="https://hihatsesiones.github.io/hihatqr/Status%20Control%20-%20Come%20Get%20Me%20If%20You%20Want%20Me%20(Swing%20Mix)%20.mp3" type="audio/mpeg">
-        </audio>
-      `;
-    } else {
-      content.innerHTML = `<p>Esta página está reservada para escaneos de QR válidos.</p>`;
-    }
-  </script>
+  <audio autoplay loop>
+    <source src="Status Control - Come Get Me If You Want Me (Swing Mix) .mp3" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
 </body>
 </html>
