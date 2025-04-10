@@ -27,11 +27,8 @@
       max-width: 400px;
       margin: 0 auto 2rem;
     }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 500px;
-      height: 300px;
+    audio {
+      display: none;
     }
   </style>
 </head>
@@ -48,9 +45,9 @@
       content.innerHTML = `
         <h1>QR CONFIRMADO</h1>
         <p>Bienvenido a Hi-Hat! Con este QR tienes ingreso sin costo (+5 invitados) hasta las 12:30 a.m. Luego de esa hora el ingreso tendrá un valor de S/.20.</p>
-        <iframe scrolling="no" allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2074992296%3Fsecret_token%3Ds-ITuupenIJ1H&color=%23000000&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=true">
-        </iframe>
+        <audio autoplay loop>
+          <source src="https://hihatsesiones.github.io/hihatqr/Status%20Control%20-%20Come%20Get%20Me%20If%20You%20Want%20Me%20(Swing%20Mix)%20.mp3" type="audio/mpeg">
+        </audio>
       `;
     } else {
       content.innerHTML = `<p>Esta página está reservada para escaneos de QR válidos.</p>`;
